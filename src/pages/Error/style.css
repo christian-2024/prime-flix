@@ -1,0 +1,11 @@
+.error {
+  background-color: darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.text-404 {
+  font-size: 120px;
+}
