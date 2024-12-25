@@ -31,3 +31,6 @@ Se não tiver o Node.js, pode ser baixado em [nodejs.org](https://nodejs.org/).
    ```bash
    git clone https://github.com/christian-2024/prime-flix.git
    ```
+## Projeto já funcionando
+
+https://jolly-kangaroo-e01834.netlify.app/
