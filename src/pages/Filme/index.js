@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 function Filme() {
   const [movies, setMovies] = useState({});
   const { id } = useParams();
@@ -42,6 +43,21 @@ function Filme() {
       </div>
     );
   }
+  function saveFilme() {
+    const minhalista = localStorage.getItem("filmesSalvos");
+    let filmesSalvos = JSON.parse(minhalista) || [];
+    const hasFilme = filmesSalvos.some(
+      (filmesSalvo) => filmesSalvo.id === movies.id
+    );
+    if (hasFilme) {
+      toast.warn("Filme já está salvo.");
+      return;
+    } else {
+      filmesSalvos.push(movies);
+      localStorage.setItem("filmesSalvos", JSON.stringify(filmesSalvos));
+      toast.success("Filme salvo com sucesso!");
+    }
+  }
 
   return (
     <div className="filme-info">
@@ -64,13 +80,15 @@ function Filme() {
       </p>
       <div className="buttons-princ">
         <div className="area-buttons">
-          <Link className="save">Salvar</Link>
+          <Link onClick={saveFilme} className="save">
+            Salvar
+          </Link>
         </div>
         <div className="area-buttons">
           <a
             className="trailer"
             href={`https://www.youtube.com/results?search_query=${movies.original_title} Trailer`}
-            target="_blank"
+            target="blank"
             rel="external"
           >
             Trailer

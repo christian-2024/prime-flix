@@ -7,8 +7,11 @@ function Header() {
         Json Flix
       </Link>{" "}
       <div className="menu">
-        <Link className="favoritos" to="/favoritos">
+        <Link className="filmes" to="/">
           Filmes
+        </Link>
+        <Link className="favoritos" to="/favoritos">
+          Favoritos
         </Link>
       </div>
     </header>
