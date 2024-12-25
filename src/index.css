@@ -39,14 +39,14 @@ strong {
   color: #fff;
   background-color: #4c89e3;
   border: 2px solid #4c89e3;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   height: 40px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
+  margin-top: -20px;
 }
 .botao:hover {
   background-color: #fff;
