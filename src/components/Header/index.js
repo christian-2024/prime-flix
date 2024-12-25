@@ -4,7 +4,7 @@ function Header() {
   return (
     <header>
       <Link className="logo" to="/">
-        Json Flix
+        Prime Flix
       </Link>{" "}
       <div className="menu">
         <Link className="filmes" to="/">
